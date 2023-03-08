@@ -1,0 +1,134 @@
+body{
+  background: #fff;
+  font-size: 20px;
+  font-size: clamp(20px, 5vw, 17px);
+  font-family: "Noto Sans JP";
+}
+main{
+  padding: 50px;
+  padding-top: 70px;
+  padding-bottom: 150px;
+}
+a{
+  text-decoration: none!important;
+  transition: transform 0.2s;
+}
+a:active{
+  transform: scale(0.95);
+}
+img.emoji{
+  height: 1em;
+  width: 1em;
+  margin: 0.05em 0.1em;
+  vertical-align: -0.1em;
+}
+.glass-filter{
+  backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.link{
+  width: 16px; 
+  height: 16px;
+}
+.sub-txt{
+  display: inline-block;
+  font-size: 50%;
+}
+.virus{
+  color: #f00;
+  animation: flash-warning 0.4s linear infinite;
+}
+@keyframes flash-warning{
+  0%,
+  100%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+#access,
+#nojs{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  padding: 30px;
+  padding-bottom: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  z-index: 1;
+}
+#ok{
+  background: #0f0;
+  color: #000;
+}
+#ng{
+  background: #f00;
+  color: #fff;
+}
+#timer{
+  font-size: 400%;
+  color: #f00;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.antivirus{
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  background: #f00;
+  transition: all 0.3s;
+  font-size: 40px;
+  font-size: clamp(30px, 5vw, 1px);
+  justify-content: center;
+  width: 95%;
+  min-width: 10px;
+  max-width: 500px;
+  height: auto;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  
+  animation: flash-antivirus 1s linear infinite;
+}
+.antivirus:hover {
+  color: #fff;
+  border-radius: 50px;
+}
+@keyframes flash-antivirus{
+  0%,
+  100%{
+    background: #e60000
+  }
+  14%{
+    background: #f39800
+  }
+  28%{
+    background: #fff100
+  }
+  42%{
+    background: #009944
+  }
+  56%{
+    background: #0068b7
+  }
+  70%{
+    background: #1d2088
+  }
+  85%{
+    background: #920783
+  }
+}
